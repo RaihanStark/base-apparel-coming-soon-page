@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+$body-font-size: 16px;
+$font-family: "Josefin Sans", sans-serif;
+// Colors
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+
+$dark-grayish-red: hsl(0, 6%, 24%);
+$gradient-primary: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$gradient-secondary: linear-gradient(
+  135deg,
+  hsl(0, 80%, 86%),
+  hsl(0, 74%, 74%)
+);
+
+body {
+  font-family: $font-family;
+  font-size: $body-font-size;
+  margin: 0;
+}
+
+.text-weight-light {
+  font-weight: 300 !important;
+}
+
+.text-weight-regular {
+  font-weight: 400 !important;
+}
+
+.text-weight-semi-bold {
+  font-weight: 600 !important;
+}
+
+// Wrapper
+.wrapper {
+  display: flex;
+}
+
+.content {
+  background-image: url("../../images/bg-pattern-desktop.svg");
+  padding: 0 20em 0 8em;
+
+  .logo {
+    margin-top: 3em;
+    margin-bottom: 8em;
+  }
+
+  h1 {
+    text-transform: uppercase;
+
+    margin: 0;
+
+    font-size: 5em;
+
+    letter-spacing: 0.2em;
+
+    &:first-of-type {
+      color: $desaturated-red;
+    }
+  }
+
+  p {
+    color: $desaturated-red;
+
+    line-height: 1.5em;
+  }
+
+  form {
+    display: flex;
+    position: relative;
+
+    margin-top: 3em;
+    textarea:focus,
+    input:focus {
+      outline: none;
+    }
+
+    input[type="email"] {
+      background-color: transparent;
+      border-style: none;
+
+      font-family: $font-family;
+
+      &::placeholder {
+        color: $desaturated-red;
+        opacity: 50%;
+      }
+      color: black;
+
+      border: 1px solid $desaturated-red;
+      border-radius: 2em;
+      padding: 1.3em 2em;
+
+      width: 100%;
+    }
+
+    button {
+      background: $gradient-secondary;
+      border-style: none;
+      padding: 1em 3em;
+      border-radius: 2em;
+
+      position: absolute;
+      right: 0;
+
+      -webkit-box-shadow: 0px 10px 44px -18px rgba(0, 0, 0, 0.9);
+      -moz-box-shadow: 0px 10px 44px -18px rgba(0, 0, 0, 0.9);
+      box-shadow: 0px 10px 44px -18px rgba(0, 0, 0, 0.9);
+
+      transition: all ease 200ms;
+      &:hover {
+        background: $gradient-primary;
+      }
+    }
+  }
+}
