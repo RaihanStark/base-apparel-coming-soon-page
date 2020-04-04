@@ -39,6 +39,9 @@ body {
 
 .content {
   background-image: url("../../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
   padding: 0 20em 0 8em;
 
   .logo {
